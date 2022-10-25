@@ -4,7 +4,7 @@
 library(shiny)
 library(dplyr)
 library(magick)
-library (mongolite)
+#library (mongolite)
 #mng_con<-mongo(collection = 'vidPrac',db='video_practice')
 
 
