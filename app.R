@@ -1,10 +1,11 @@
 #install.packages("mongolite", dep=T)
 #install.packages("markdown", dep=T)
+#install.packages("bslib", dep=T)
 
 library(shiny)
 library(dplyr)
-library(magick)
-#library (mongolite)
+library(bslib)
+
 #mng_con<-mongo(collection = 'vidPrac',db='video_practice')
 
 
@@ -13,14 +14,17 @@ ui <- fluidPage(
   
   
     # Application title
-    titlePanel(title=div(img(src = 'mini.png'),"Chess Mining" , align="center", img(src = 'mini.png'))
+    titlePanel("Chess Mining",
+               title=div(img(src = 'mini.png'),"Chess Mining" , align="center", img(src = 'mini.png'))
       ),
    
-     navbarPage(tabPanel("Mining"),
-                tabPanel("Write Blockchain"),
-                tabPanel("White Paper"),
-                tabPanel("NFT"),
+     navbarPage("⛥",
+                tabPanel("Minería ♞"),
+                tabPanel("Write Blockchain ♝"),
+                tabPanel("White Paper ♜"),
+                tabPanel("NFT ♛")
     ),
+    
     
     # Sidebar with a slider input for number of bins 
     sidebarLayout(position = "right",
@@ -39,31 +43,20 @@ ui <- fluidPage(
         ),
 
         # Show a plot of the generated distribution
-        mainPanel(
-             h1("La humanidad sueña libertad, 
-             y siente valiente la voz,
-             y el pueblo ruge el miedo,
-             y el olor a muerte se aleja
-             de nuestro Sol", align="center"),
-             h2("del suelo he recogido los diamantes,
-                los soles hechos vida susurran
-                nombres de todos los hombres", align="center"),
-             br(),
+        mainPanel(br(),
+             h2("♚ Crea un Blockchain entre tod@s", align="center"),
              hr(),
-             img(src = 'un_oro.png', align="center", height = '200px', width = '200px'),
-             img(src = 'un_oro.png', align="center", height = '150px', width = '150px'),
-             img(src = 'un_oro.png', align="center", height = '100px', width = '100px'),
-             img(src = 'un_oro.png', align="center", height = '50px', width = '50px'),
-             img(src = 'un_oro.png', align="center", height = '25px', width = '25px'),
-             img(src = 'un_oro.png', align="center", height = '12.6px', width = '12.6px'),
-             img(src = 'un_oro.png', align="center", height = '200px', width = '200px'),
-             img(src = 'un_oro.png', align="center", height = '150px', width = '150px'),
-             img(src = 'un_oro.png', align="center", height = '100px', width = '100px'),
-             img(src = 'un_oro.png', align="center", height = '50px', width = '50px'),
-             img(src = 'un_oro.png', align="center", height = '25px', width = '25px'),
-             img(src = 'un_oro.png', align="center", height = '12.6px', width = '12.6px'),
+             h2("♛ Almacena información inmutable", align="center"),
              hr(),
-             br(),
+             h2("♜ Crea dinero con nuestros datos", align="center"),
+             hr(),
+             h2("♝ Inteligencia Artificial para la Humanidad", align="center"),
+             hr(),
+             h2("♞ Irracionales= φ, e y π, velocidad de la luz", align="center"),
+             hr(),
+             h2("♟ Unidad tecnológica y social",  align="center"),
+            hr(),
+            br()
               )
     )
 )
